@@ -1,0 +1,217 @@
+@import 'Bootstrap';
+@import 'Common';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Dialog Confirm */
+.bg-color-light-gray {
+  background-color: $gray-200;
+}
+
+.button-accept-dialog {
+  background-color: $purple-500;
+  color: white;
+  &:hover {
+    background-color: $purple-600;
+  }
+}
+
+.button-normal-dialog {
+  background-color: $white;
+  &:hover {
+    background-color: $gray-200;
+  }
+}
+
+.button-dialog {
+  padding: 5px;
+  width: 100px;
+  border-radius: 5px;
+  border: 1px solid $gray-300;
+}
+
+.w-dialog-confirm {
+  width: max-content;
+  margin: auto;
+}
+
+/* Popup Menu */
+.popup-menu-wrapper {
+  display: block;
+  z-index: 2000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .popup-dialog {
+    float: right;
+    background-color: white;
+    padding: 4px;
+    width: 330px;
+    margin: 0px;
+
+    .popup-content {
+      display: flex;
+      flex-direction: column;
+      background-color: #dde6ed;
+      border: none;
+      border-radius: 0px;
+    }
+  }
+
+  .popup-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    >.popup-title {
+      flex: 1;
+      text-align: center;
+      border: 4px solid white;
+      border-top-width: 0px;
+      border-right-width: 0px;
+      border-left-width: 0px;
+    }
+
+    button {
+      width: 40px;
+      height: 40px;
+      border: 4px white solid;
+      border-top-width: 0px;
+      border-right-width: 0px;
+    }
+  }
+
+  .popup-body {
+    margin: 5px 0px;
+
+    .popup-menu-item {
+      background-color: white;
+      margin: 10px;
+      padding: 5px;
+      text-align: center;
+      border-radius: 5px;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #025464;
+        color: #fff;
+      }
+    }
+
+    .popup-menu-item-border {
+      background-color: #025464;
+      padding: 5px;
+      margin-top: 4px;
+      margin-bottom: 4px;
+      text-align: center;
+      border-radius: 5px;
+      color: $white;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #024350;
+      }
+    }
+  }
+}
+
+/* Home Page */
+.at-home-accordion {
+  border: solid 5px white;
+  // height: 500px;
+  padding-right: 10px;
+
+  .accordion-item {
+    border: none;
+    margin-bottom: 15px;
+
+    .accordion-header {
+      .accordion-button:not(.collapsed)::after {
+        transform: none;
+      }
+    }
+
+    .accordion-button {
+      background-color: #dde6ed !important;
+      padding: 8px 10px;
+      font-weight: bold;
+
+      &:focus {
+        color: black;
+        border-color: black !important;
+        box-shadow: none;
+      }
+
+      &::after {
+        background-image: url('../img/icons/triangle.svg') !important;
+        background-origin: content-box;
+        background-size: 18px;
+        border: solid 5px white;
+        width: 40px;
+        height: 45px;
+        margin-bottom: -13px;
+        margin-top: -13px;
+        margin-right: -13px;
+        padding-left: 6px;
+        padding-top: 10px;
+        transition: none;
+      }
+
+      &:not(.collapsed) {
+        color: black;
+        box-shadow: none;
+
+        &::after {
+          background-image: url('../img/icons/plain-triangle.svg') !important;
+          background-origin: content-box;
+          background-size: 18px;
+          border: solid 5px white;
+          width: 40px;
+          height: 45px;
+          margin-bottom: -13px;
+          margin-top: -13px;
+          margin-right: -13px;
+          padding-left: 6px;
+          padding-top: 7px;
+          transition: none;
+        }
+      }
+
+      div {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .accordion-body {
+    background-color: #dde6ed !important;
+    padding: 10px;
+    padding-bottom: 1px;
+    padding-top: 0px;
+
+    table,
+    tr {
+      border: solid 5px white;
+    }
+  }
+}
+
+.at-home-accordion-row {
+  margin: 0;
+
+  // height: calc(100vh - 450px);
+  // overflow-y: auto;
+  .col-lg-12 {
+    padding: 0;
+  }
+}
+
+.scrollbar-container {
+  height: calc(100vh - 430px);
+  margin-top: 10px;
+}

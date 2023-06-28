@@ -1,0 +1,14 @@
+$theme-colors: (
+  "primary": #025464
+);
+
+$container-max-widths: (
+  sm: 100%,
+  md: 100%,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
